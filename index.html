@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra, Papel o Tijera</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Piedra, Papel o Tijera</h1>
+
+        <label for="modoJuego">Selecciona el modo de juego:</label>
+        <select id="modoJuego" onchange="cambiarModo()">
+            <option value="jugador">Jugador vs Jugador</option>
+            <option value="maquina">Jugador vs Máquina</option>
+        </select>
+
+        <!-- Sección de Jugador vs Jugador -->
+        <div id="jugadorVsJugador" class="player">
+            <h2>Jugador 1</h2>
+            <button id="btnJugador1" onclick="jugarJugador1()">Jugar</button>
+            <p id="resultadoJugador1"></p>
+
+            <h2>Jugador 2</h2>
+            <button id="btnJugador2" onclick="jugarJugador2()">Jugar</button>
+            <p id="resultadoJugador2"></p>
+
+            <button id="reiniciarBtn" onclick="reiniciarJuegoJugadorVsJugador()">Reiniciar</button>
+        </div>
+
+        <!-- Sección de Jugador vs Máquina -->
+        <div id="jugadorVsMaquina" class="player" style="display: none;">
+            <h2>Jugador 1</h2>
+            <button id="btnMaquinaJugador" onclick="jugarJugador1()">Jugar</button>
+            <p id="resultadoJugador1"></p>
+
+            <h2>Máquina</h2>
+            <button id="btnMaquina" onclick="jugarContraMaquina()">Jugar contra la máquina</button>
+            <p id="resultadoMaquina"></p>
+        </div>
+
+        <div id="resultadoFinal"></div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
